@@ -1,1 +1,3 @@
 language: swift
+xcode_project: DuoUI.xcworkspace # path to your xcodeproj folder
+xcode_scheme: DuoUI
