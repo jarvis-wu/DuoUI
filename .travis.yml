@@ -5,8 +5,6 @@ env:
 
 before_install:
 - brew update
-- brew outdated carthage || brew upgrade carthage
-- carthage update --platform iOS
 - pod install
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
