@@ -10,10 +10,8 @@ import UIKit
 
 class DuolingoBorderedCard: UIView {
 
-  var CORNER_RADIUS: CGFloat = 15
-  var BORDER_WIDTH: CGFloat = 2
-  var HEIGHT: CGFloat = 100
-  var borderColor = UIColor(white: 0.9, alpha: 1).cgColor
+  let ui = DuoUI.shared
+  
   var heightConstraint: NSLayoutConstraint!
   
   override init(frame: CGRect) {
@@ -27,10 +25,10 @@ class DuolingoBorderedCard: UIView {
   }
   
   private func commonInit() {
-    layer.cornerRadius = CORNER_RADIUS
-    layer.borderColor = borderColor
-    layer.borderWidth = BORDER_WIDTH
-    heightConstraint = height(HEIGHT, isActive: true)
+    layer.cornerRadius = ui.DUO_BORDERED_CARD_CORNER_RADIUS
+    layer.borderColor = ui.DUO_BORDERED_CARD_BORDER_COLOR
+    layer.borderWidth = ui.DUO_BORDERED_CARD_BORDER_WIDTH
+    heightConstraint = height(ui.DUO_BORDERED_CARD_HEIGHT, isActive: true)
   }
 
 

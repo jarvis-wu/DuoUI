@@ -9,6 +9,8 @@
 import UIKit
 
 class DuolingoTitleLabel: UILabel {
+  
+  let ui = DuoUI.shared
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -21,9 +23,9 @@ class DuolingoTitleLabel: UILabel {
   }
   
   private func commonInit() {
-    textColor = .black
-    text = "title label".capitalized
-    let fontSize: CGFloat = 18
+    textColor = ui.DUO_TITLE_LABEL_TEXT_COLOR
+    text = ui.DUO_TITLE_LABEL_DEFAULT_TEXT
+    let fontSize: CGFloat = ui.DUO_TITLE_LABEL_FONT_SIZE
     let systemFont = UIFont.systemFont(ofSize: fontSize, weight: .bold)
     let font: UIFont
     if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {

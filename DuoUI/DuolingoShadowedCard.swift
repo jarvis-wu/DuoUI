@@ -10,20 +10,17 @@ import UIKit
 
 class DuolingoShadowedCard: UIView, DropShadowView {
   
+  let ui = DuoUI.shared
   var background = UIView()
   var backgroundBottomToSuperview: NSLayoutConstraint!
-  var CORNER_RADIUS: CGFloat = 15
-  var DROP_SHADOW_HEIGHT: CGFloat = 4
-  var HEIGHT: CGFloat = 100
-  let dimRatio: CGFloat = 0.83
   var mainColor = UIColor(red: 123/255, green: 199/255, blue: 11/255, alpha: 1) {
     didSet {
-      shadowColor = mainColor.dimmed(by: 1 - dimRatio)!
+      shadowColor = mainColor.dimmed(by: 1 - ui.DUO_SHADOWED_CARD_DIM_RATIO)!
       addShadow()
     }
   }
   var shadowColor: UIColor {
-    get { return mainColor.dimmed(by: 1 - dimRatio)! } set {}
+    get { return mainColor.dimmed(by: 1 - ui.DUO_SHADOWED_CARD_DIM_RATIO)! } set {}
   }
   var heightConstraint: NSLayoutConstraint!
   
@@ -38,8 +35,8 @@ class DuolingoShadowedCard: UIView, DropShadowView {
   }
   
   private func commonInit() {
-    layer.cornerRadius = CORNER_RADIUS
-    heightConstraint = height(HEIGHT, isActive: true)
+    layer.cornerRadius = ui.DUO_SHADOWED_CARD_CORNER_RADIUS
+    heightConstraint = height(ui.DUO_SHADOWED_CARD_HEIGHT, isActive: true)
     addShadow()
   }
   
@@ -49,7 +46,7 @@ class DuolingoShadowedCard: UIView, DropShadowView {
     background.layer.cornerRadius = self.layer.cornerRadius
     background.backgroundColor = mainColor
     background.edgesToSuperview(excluding: [.bottom])
-    backgroundBottomToSuperview = background.bottomToSuperview(offset: -DROP_SHADOW_HEIGHT)
+    backgroundBottomToSuperview = background.bottomToSuperview(offset: -ui.DUO_SHADOWED_CARD_DROP_SHADOW_HEIGHT)
   }
   
 

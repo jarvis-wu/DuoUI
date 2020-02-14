@@ -9,130 +9,6 @@
 import UIKit
 import SVGKit
 
-class ShopItemCell: UICollectionViewCell {
-  
-  static var identifier: String = "ShopItemCell"
-  weak var card: DuolingoBorderedCard!
-  weak var iconView: SVGKFastImageView!
-  weak var titleLabel: DuolingoTitleLabel!
-  weak var label: DuolingoLabel!
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    let card = DuolingoBorderedCard()
-    card.translatesAutoresizingMaskIntoConstraints = false
-    self.contentView.addSubview(card)
-    card.edgesToSuperview()
-    self.card = card
-    
-    let iconView = SVGKFastImageView(svgkImage: nil)!
-    card.addSubview(iconView)
-    iconView.translatesAutoresizingMaskIntoConstraints = false
-    iconView.height(80)
-    iconView.aspectRatio(1)
-    iconView.leadingToSuperview(offset: 20)
-    iconView.topToSuperview(offset: 20)
-    self.iconView = iconView
-    
-    self.reset()
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-  }
-
-  override func prepareForReuse() {
-      super.prepareForReuse()
-      self.reset()
-  }
-
-  func reset() {
-      //
-  }
-  
-}
-
-class AchievementCell: UICollectionViewCell {
-
-  static var identifier: String = "AchievementCell"
-  weak var card: DuolingoShadowedCard!
-  weak var cardIcon: SVGKFastImageView! // encapsulate into subclass
-  weak var cardTitleLabel: DuolingoTitleLabel! // encapsulate into subclass
-  weak var rightStackView: UIStackView!
-  weak var titleLabel: DuolingoTitleLabel!
-  weak var label: DuolingoLabel!
-  weak var progressView: DuolingoProgressView!
-
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    let card = DuolingoShadowedCard()
-    card.translatesAutoresizingMaskIntoConstraints = false
-    self.contentView.addSubview(card)
-    card.topToSuperview()
-    card.leadingToSuperview()
-    card.aspectRatio(6/7)
-    self.card = card
-    
-    let cardIcon = SVGKFastImageView(svgkImage: nil)!
-    card.addSubview(cardIcon)
-    cardIcon.translatesAutoresizingMaskIntoConstraints = false
-    cardIcon.centerXToSuperview()
-    cardIcon.aspectRatio(1)
-    cardIcon.leadingToSuperview(offset: 15)
-    cardIcon.topToSuperview(offset: 10)
-    self.cardIcon = cardIcon
-    
-    let cardTitleLabel = DuolingoTitleLabel()
-    card.addSubview(cardTitleLabel)
-    cardTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-    cardTitleLabel.centerXToSuperview()
-    cardTitleLabel.leadingToSuperview(offset: 5)
-    cardTitleLabel.bottomToSuperview(offset: -10)
-    self.cardTitleLabel = cardTitleLabel
-    
-    let rightStack = UIStackView()
-    rightStack.axis = .vertical
-    rightStack.distribution = .equalCentering
-    self.contentView.addSubview(rightStack)
-    rightStack.leadingToTrailing(of: card, offset: 20)
-    rightStack.centerYToSuperview()
-    rightStack.trailingToSuperview()
-    self.rightStackView = rightStack
-    
-    let titleLabel = DuolingoTitleLabel()
-    titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    rightStack.addArrangedSubview(titleLabel)
-    self.titleLabel = titleLabel
-    
-    let label = DuolingoLabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    rightStack.addArrangedSubview(label)
-    label.topToBottom(of: titleLabel, offset: 10)
-    self.label = label
-    
-    let progressView = DuolingoProgressView()
-    progressView.translatesAutoresizingMaskIntoConstraints = false
-    rightStack.addArrangedSubview(progressView)
-    progressView.topToBottom(of: label, offset: 15)
-    self.progressView = progressView
-    
-    self.reset()
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-  }
-
-  override func prepareForReuse() {
-      super.prepareForReuse()
-      self.reset()
-  }
-
-  func reset() {
-      //
-  }
-}
-
 class ViewController: UIViewController {
   
   let icons1 = ["parrot"]
@@ -173,7 +49,7 @@ class ViewController: UIViewController {
     headerView.topToSuperview()
     headerView.widthToSuperview()
     headerView.height(100)
-    bottomView.top(to: duolingoButton, offset: -30)
+    bottomView.topToBottom(of: duolingoButton, offset: -80)
     bottomView.widthToSuperview()
     bottomView.bottomToSuperview()
     cardCollectionView.leadingToSuperview()

@@ -10,6 +10,8 @@ import UIKit
 
 class DuolingoLabel: UILabel {
 
+  let ui = DuoUI.shared
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     commonInit()
@@ -21,9 +23,9 @@ class DuolingoLabel: UILabel {
   }
   
   private func commonInit() {
-    textColor = .gray
-    text = "This is just a plain normal label".capitalized
-    let fontSize: CGFloat = 17
+    textColor = ui.DUO_LABEL_TEXT_COLOR
+    text = ui.DUO_LABEL_DEFAULT_TEXT.capitalized
+    let fontSize: CGFloat = ui.DUO_LABEL_FONT_SIZE
     let systemFont = UIFont.systemFont(ofSize: fontSize, weight: .medium)
     let font: UIFont
     if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {

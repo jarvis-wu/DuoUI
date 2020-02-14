@@ -9,6 +9,8 @@
 import UIKit
 
 class DuolingoSeparator: UIView {
+  
+  let ui = DuoUI.shared
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -21,8 +23,8 @@ class DuolingoSeparator: UIView {
   }
   
   private func commonInit() {
-    backgroundColor = UIColor(white: 0.9, alpha: 1)
-    height(2)
+    backgroundColor = ui.DUO_SEPARATOR_COLOR
+    height(ui.DUO_SEPARATOR_HEIGHT)
   }
   
   override func didMoveToSuperview() {

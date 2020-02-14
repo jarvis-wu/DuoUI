@@ -10,6 +10,8 @@ import UIKit
 
 class DuolingoProgressView: UIProgressView {
   
+  let ui = DuoUI.shared
+  
   override var progress: Float {
     didSet {
       guard let _ = tintedProgressWidth else { return }
@@ -21,12 +23,6 @@ class DuolingoProgressView: UIProgressView {
   let trackBackgroundView = UIView()
   let tintedProgress = UIView()
   let highlightView = UIView()
-  let DEFAULT_HEIGHT: CGFloat = 24
-  let DEFAULT_TRACK_COLOR = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
-  let DEFAULT_PROGRESS_COLOR = UIColor(red: 255/255, green: 200/255, blue: 0/255, alpha: 1)
-  var DEFAULT_PROGRESS_HIGHLIGHT: UIColor {
-    return DEFAULT_PROGRESS_COLOR.dimmed(by: -0.05) ?? .white
-  }
   var tintedProgressWidth: NSLayoutConstraint!
 
   override init(frame: CGRect) {
@@ -40,8 +36,9 @@ class DuolingoProgressView: UIProgressView {
   }
   
   private func commonInit() {
+    let height = ui.DUO_PROGRESS_VIEW_DEFAULT_HEIGHT
     clipsToBounds = false
-    height(DEFAULT_HEIGHT)
+    self.height(height)
     trackTintColor = .clear
     tintColor = .clear
     progress = 0.5
@@ -51,24 +48,24 @@ class DuolingoProgressView: UIProgressView {
     tintedProgress.addSubview(highlightView)
     
     trackBackgroundView.edgesToSuperview(excluding: [.top, .bottom])
-    trackBackgroundView.height(DEFAULT_HEIGHT)
+    trackBackgroundView.height(height)
     trackBackgroundView.centerYToSuperview()
-    trackBackgroundView.layer.cornerRadius = DEFAULT_HEIGHT / 2
-    trackBackgroundView.backgroundColor = DEFAULT_TRACK_COLOR
+    trackBackgroundView.layer.cornerRadius = height / 2
+    trackBackgroundView.backgroundColor = ui.DUO_PROGRESS_DEFAULT_TRACK_COLOR
     
     tintedProgress.edgesToSuperview(excluding: [.top, .bottom, .trailing])
-    tintedProgress.height(DEFAULT_HEIGHT)
+    tintedProgress.height(height)
     tintedProgress.centerYToSuperview()
     tintedProgressWidth = tintedProgress.widthToSuperview(multiplier: CGFloat(self.progress))
-    tintedProgress.layer.cornerRadius = DEFAULT_HEIGHT / 2
-    tintedProgress.backgroundColor = DEFAULT_PROGRESS_COLOR
+    tintedProgress.layer.cornerRadius = height / 2
+    tintedProgress.backgroundColor = ui.DUO_PROGRESS_DEFAULT_PROGRESS_COLOR
     
     highlightView.bottom(to: tintedProgress, tintedProgress.centerYAnchor, offset: 1)
-    highlightView.height(DEFAULT_HEIGHT / 3)
-    highlightView.layer.cornerRadius = (DEFAULT_HEIGHT / 3) / 2
+    highlightView.height(height / 3)
+    highlightView.layer.cornerRadius = (height / 3) / 2
     highlightView.centerXToSuperview()
     highlightView.leadingToSuperview(offset: 5)
-    highlightView.backgroundColor = DEFAULT_PROGRESS_HIGHLIGHT
+    highlightView.backgroundColor = ui.DUO_PROGRESS_DEFAULT_PROGRESS_HIGHLIGHT
   }
 
 }
