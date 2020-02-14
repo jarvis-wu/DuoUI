@@ -1,7 +1,14 @@
 language: swift
 osx_image: xcode11.3.1
-xcode_workspace: DuoUI.xcworkspace
-script:
-- xcodebuild -scheme DuoUI -sdk iphonesimulator13.2 -destination 'platform=iOS Simulator,name=iPhone X,OS=13.3' build
+env:
+  - DESTINATION="OS=12.1,name=iPhone XS" SCHEME="DuoUI" SDK=iphonesimulator12.1
+
 before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+- carthage update --platform iOS
 - pod install
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+script:
+- xcodebuild clean build -workspace DuoUI.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
