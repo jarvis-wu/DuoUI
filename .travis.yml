@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode13.1
 xcode_workspace: DuoUI.xcworkspace
-xcode_scheme: DuoUI
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+script:
+- xcodebuild -scheme DuoUI -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build
 before_install:
 - pod install
