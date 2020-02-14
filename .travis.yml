@@ -6,7 +6,6 @@ env:
 before_install:
 - brew update
 - pod install
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
 - xcodebuild clean build -workspace DuoUI.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
