@@ -1,3 +1,7 @@
 language: swift
-xcode_project: DuoUI.xcworkspace # path to your xcodeproj folder
+osx_image: xcode13.1
+xcode_workspace: DuoUI.xcworkspace
 xcode_scheme: DuoUI
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+before_install:
+- pod install
