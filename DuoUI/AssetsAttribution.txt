@@ -1,0 +1,9 @@
+//
+//  AssetsAttribution.txt
+//  DuoUI
+//
+//  Created by Jarvis Wu on 2/14/20.
+//  Copyright © 2020 Jarvis Wu. All rights reserved.
+//
+
+Icons made by Freepik (https://www.flaticon.com/authors/freepik) from Flaticon (https://www.flaticon.com/).
