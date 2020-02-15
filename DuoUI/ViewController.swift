@@ -11,6 +11,7 @@ import SVGKit
 
 class ViewController: UIViewController {
   
+  // Dummy data
   let icons1 = ["parrot"]
   let icons2 = ["walrus", "dolphin", "chameleon", "koala", "penguin", "hedgehog", "hyena", "flamingos"]
   let colors: [UIColor] = [.systemRed, .systemOrange, .systemYellow, .systemGreen, .systemTeal, .systemBlue, .systemIndigo, .systemPurple]
@@ -71,6 +72,12 @@ class ViewController: UIViewController {
     let separator = DuolingoSeparator()
     headerView.addSubview(separator)
     separator.bottomToSuperview()
+    let headerTitle = DuolingoTitleLabel()
+    headerTitle.text = "DuoUI"
+    headerTitle.textColor = UIColor.lightGray
+    headerView.addSubview(headerTitle)
+    headerTitle.centerXToSuperview()
+    headerTitle.bottomToSuperview(offset: -20)
   }
   
   func layoutCells() {
@@ -103,16 +110,19 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
       let shopItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopItemCell.identifier, for: indexPath) as! ShopItemCell
       let urlPath = Bundle.main.url(forResource: icons1[indexPath.item], withExtension: "svg")
       shopItemCell.iconView.image = SVGKImage(contentsOf: urlPath)
+      shopItemCell.label.text = "This is a tiny title label representing a purchasable item in the shop."
+      shopItemCell.priceLabel.text = "999"
       cell = shopItemCell
     } else if indexPath.section == 1 {
       let achivementCell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementCell.identifier, for: indexPath) as! AchievementCell
       achivementCell.card.mainColor = colors[indexPath.item]
       let urlPath = Bundle.main.url(forResource: icons2[indexPath.item], withExtension: "svg")
       achivementCell.cardIcon.image = SVGKImage(contentsOf: urlPath)
-      achivementCell.cardTitleLabel.text = "ICON"
+      achivementCell.cardTitleLabel.text = "icon".uppercased()
       achivementCell.cardTitleLabel.textAlignment = .center
       achivementCell.cardTitleLabel.textColor = .white
       achivementCell.cardTitleLabel.font = achivementCell.cardTitleLabel.font.withSize(15)
+      achivementCell.label.font = achivementCell.label.font.withSize(17)
       cell = achivementCell
     }
     return cell
@@ -121,7 +131,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     var size = CGSize.zero
     if indexPath.section == 0 {
-      size = CGSize(width: collectionView.frame.width - 30, height: 180)
+      size = CGSize(width: collectionView.frame.width - 30, height: 170)
     } else if indexPath.section == 1 {
       size = CGSize(width: collectionView.frame.width - 30, height: 100)
     }

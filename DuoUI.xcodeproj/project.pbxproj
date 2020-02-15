@@ -35,6 +35,7 @@
 		4692732123F75102009C2B6D /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692732023F75102009C2B6D /* AchievementCell.swift */; };
 		4692732923F76B9A009C2B6D /* DuoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692732823F76B9A009C2B6D /* DuoUITests.swift */; };
 		4692733723F76BAF009C2B6D /* DuoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692733623F76BAF009C2B6D /* DuoUIUITests.swift */; };
+		4692733F23F78466009C2B6D /* diamond.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4692733E23F78466009C2B6D /* diamond.svg */; };
 		84AC9FC710CAC424F891DCDB /* Pods_DuoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACD7EFB555C4D69C6EC437 /* Pods_DuoUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		4692733423F76BAF009C2B6D /* DuoUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuoUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4692733623F76BAF009C2B6D /* DuoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoUIUITests.swift; sourceTree = "<group>"; };
 		4692733823F76BAF009C2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4692733E23F78466009C2B6D /* diamond.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = diamond.svg; sourceTree = "<group>"; };
 		DC2DEE34C4DB43910E869C1D /* Pods-DuoUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoUI.debug.xcconfig"; path = "Target Support Files/Pods-DuoUI/Pods-DuoUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 		469272ED23F74B9C009C2B6D /* SVG */ = {
 			isa = PBXGroup;
 			children = (
+				4692733E23F78466009C2B6D /* diamond.svg */,
 				4692731023F74C8A009C2B6D /* chameleon.svg */,
 				4692731A23F74CA2009C2B6D /* walrus.svg */,
 				4692730C23F74C8A009C2B6D /* dolphin.svg */,
@@ -331,6 +334,7 @@
 				4692731B23F74CA2009C2B6D /* walrus.svg in Resources */,
 				4692731523F74C8A009C2B6D /* hyena.svg in Resources */,
 				469272CB23F74A61009C2B6D /* Assets.xcassets in Resources */,
+				4692733F23F78466009C2B6D /* diamond.svg in Resources */,
 				4692731723F74C8A009C2B6D /* koala.svg in Resources */,
 				4692731923F74C8A009C2B6D /* parrot.svg in Resources */,
 				469272C923F74A60009C2B6D /* Main.storyboard in Resources */,

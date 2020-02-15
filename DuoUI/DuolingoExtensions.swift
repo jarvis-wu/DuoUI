@@ -14,7 +14,7 @@ class DuoUI {
   static let shared = DuoUI()
   
   // DuoProgressView
-  let DUO_PROGRESS_VIEW_DEFAULT_HEIGHT: CGFloat = 24
+  let DUO_PROGRESS_VIEW_DEFAULT_HEIGHT: CGFloat = 20
   let DUO_PROGRESS_DEFAULT_TRACK_COLOR = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
   let DUO_PROGRESS_DEFAULT_PROGRESS_COLOR = UIColor(red: 255/255, green: 200/255, blue: 0/255, alpha: 1)
   var DUO_PROGRESS_DEFAULT_PROGRESS_HIGHLIGHT: UIColor {
@@ -40,7 +40,7 @@ class DuoUI {
   // DuoLabel
   let DUO_LABEL_TEXT_COLOR = UIColor.gray
   let DUO_LABEL_DEFAULT_TEXT = "This is just a plain normal label"
-  let DUO_LABEL_FONT_SIZE : CGFloat = 17
+  let DUO_LABEL_FONT_SIZE : CGFloat = 18
   
   // DuoTitleLabel
   let DUO_TITLE_LABEL_TEXT_COLOR = UIColor.black
