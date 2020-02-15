@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4692732523F76B9A009C2B6D"
+               BuildableName = "DuoUITests.xctest"
+               BlueprintName = "DuoUITests"
+               ReferencedContainer = "container:DuoUI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4692733323F76BAF009C2B6D"
+               BuildableName = "DuoUIUITests.xctest"
+               BlueprintName = "DuoUIUITests"
+               ReferencedContainer = "container:DuoUI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
