@@ -10,30 +10,22 @@ import UIKit
 import TinyConstraints
 
 protocol DropShadowView {
-  var mainColor: UIColor { get }
-  var shadowColor: UIColor { get set }
-  var background: UIView { get }
-  var backgroundBottomToSuperview: NSLayoutConstraint! { get }
-  var DROP_SHADOW_HEIGHT: CGFloat { get }
   func addShadow()
 }
 
 class DuolingoButton: UIButton, DropShadowView {
   
+  let ui = DuoUI.shared
   var background = UIView()
   var backgroundBottomToSuperview: NSLayoutConstraint!
-  var CORNER_RADIUS: CGFloat = 12
-  var DROP_SHADOW_HEIGHT: CGFloat = 4
-  var HEIGHT: CGFloat = 50
-  let dimRatio: CGFloat = 0.83
   var mainColor = UIColor(red: 27/255, green: 177/255, blue: 247/255, alpha: 1) {
     didSet {
       // set different color for white button
-      shadowColor = mainColor.dimmed(by: 1 - dimRatio)!
+      shadowColor = mainColor.dimmed(by: 1 - ui.DUO_BUTTON_DIM_RATIO)!
     }
   }
   var shadowColor: UIColor {
-    get { return mainColor.dimmed(by: 1 - dimRatio)! } set {}
+    get { return mainColor.dimmed(by: 1 - ui.DUO_BUTTON_DIM_RATIO)! } set {}
   }
   var heightConstraint: NSLayoutConstraint!
   
@@ -50,7 +42,7 @@ class DuolingoButton: UIButton, DropShadowView {
   
   private func commonInit() {
     setTitleColor(.white, for: .normal)
-    let fontSize: CGFloat = 15
+    let fontSize: CGFloat = ui.DUO_BUTTON_FONT_SIZE
     let systemFont = UIFont.systemFont(ofSize: fontSize, weight: .heavy)
     let font: UIFont
     if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {
@@ -59,10 +51,10 @@ class DuolingoButton: UIButton, DropShadowView {
       font = systemFont
     }
     titleLabel?.font = font
-    titleLabel?.centerYToSuperview(offset: -DROP_SHADOW_HEIGHT / 2)
+    titleLabel?.centerYToSuperview(offset: -ui.DUO_BUTTON_DROP_SHADOW_HEIGHT / 2)
     setTitle("shadowed button".uppercased(), for: .normal)
-    layer.cornerRadius = CORNER_RADIUS
-    heightConstraint = height(HEIGHT, isActive: true)
+    layer.cornerRadius = ui.DUO_BUTTON_CORNER_RADIUS
+    heightConstraint = height(ui.DUO_BUTTON_HEIGHT, isActive: true)
     
     addShadow()
   }
@@ -73,7 +65,7 @@ class DuolingoButton: UIButton, DropShadowView {
     background.layer.cornerRadius = self.layer.cornerRadius
     background.backgroundColor = mainColor
     background.edgesToSuperview(excluding: [.bottom])
-    backgroundBottomToSuperview = background.bottomToSuperview(offset: -DROP_SHADOW_HEIGHT)
+    backgroundBottomToSuperview = background.bottomToSuperview(offset: -ui.DUO_BUTTON_DROP_SHADOW_HEIGHT)
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -82,7 +74,7 @@ class DuolingoButton: UIButton, DropShadowView {
     UIView.animate(withDuration: 0.2) {
       self.heightConstraint.isActive = false
       self.backgroundBottomToSuperview.isActive = false
-      self.heightConstraint = self.height(self.HEIGHT - self.DROP_SHADOW_HEIGHT, isActive: true)
+      self.heightConstraint = self.height(self.ui.DUO_BUTTON_HEIGHT - self.ui.DUO_BUTTON_DROP_SHADOW_HEIGHT, isActive: true)
       self.backgroundBottomToSuperview = self.background.bottomToSuperview()
     }
   }
@@ -93,8 +85,8 @@ class DuolingoButton: UIButton, DropShadowView {
     UIView.animate(withDuration: 0.2) {
       self.heightConstraint.isActive = false
       self.backgroundBottomToSuperview.isActive = false
-      self.heightConstraint = self.height(self.HEIGHT, isActive: true)
-      self.backgroundBottomToSuperview = self.background.bottomToSuperview(offset: -self.DROP_SHADOW_HEIGHT)
+      self.heightConstraint = self.height(self.ui.DUO_BUTTON_HEIGHT, isActive: true)
+      self.backgroundBottomToSuperview = self.background.bottomToSuperview(offset: -self.ui.DUO_BUTTON_DROP_SHADOW_HEIGHT)
     }
   }
 

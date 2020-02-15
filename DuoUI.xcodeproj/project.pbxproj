@@ -31,8 +31,29 @@
 		4692731923F74C8A009C2B6D /* parrot.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4692731123F74C8A009C2B6D /* parrot.svg */; };
 		4692731B23F74CA2009C2B6D /* walrus.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4692731A23F74CA2009C2B6D /* walrus.svg */; };
 		4692731D23F74D40009C2B6D /* AssetsAttribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4692731C23F74D40009C2B6D /* AssetsAttribution.txt */; };
+		4692731F23F750BC009C2B6D /* ShopItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692731E23F750BC009C2B6D /* ShopItemCell.swift */; };
+		4692732123F75102009C2B6D /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692732023F75102009C2B6D /* AchievementCell.swift */; };
+		4692732923F76B9A009C2B6D /* DuoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692732823F76B9A009C2B6D /* DuoUITests.swift */; };
+		4692733723F76BAF009C2B6D /* DuoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4692733623F76BAF009C2B6D /* DuoUIUITests.swift */; };
 		84AC9FC710CAC424F891DCDB /* Pods_DuoUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACD7EFB555C4D69C6EC437 /* Pods_DuoUI.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4692732B23F76B9A009C2B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469272B623F74A60009C2B6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469272BD23F74A60009C2B6D;
+			remoteInfo = DuoUI;
+		};
+		4692733923F76BAF009C2B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469272B623F74A60009C2B6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469272BD23F74A60009C2B6D;
+			remoteInfo = DuoUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		30ACD7EFB555C4D69C6EC437 /* Pods_DuoUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DuoUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +84,14 @@
 		4692731123F74C8A009C2B6D /* parrot.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parrot.svg; sourceTree = "<group>"; };
 		4692731A23F74CA2009C2B6D /* walrus.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = walrus.svg; sourceTree = "<group>"; };
 		4692731C23F74D40009C2B6D /* AssetsAttribution.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AssetsAttribution.txt; sourceTree = "<group>"; };
+		4692731E23F750BC009C2B6D /* ShopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCell.swift; sourceTree = "<group>"; };
+		4692732023F75102009C2B6D /* AchievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
+		4692732623F76B9A009C2B6D /* DuoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4692732823F76B9A009C2B6D /* DuoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoUITests.swift; sourceTree = "<group>"; };
+		4692732A23F76B9A009C2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4692733423F76BAF009C2B6D /* DuoUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuoUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4692733623F76BAF009C2B6D /* DuoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoUIUITests.swift; sourceTree = "<group>"; };
+		4692733823F76BAF009C2B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC2DEE34C4DB43910E869C1D /* Pods-DuoUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoUI.debug.xcconfig"; path = "Target Support Files/Pods-DuoUI/Pods-DuoUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +104,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4692732323F76B9A009C2B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4692733123F76BAF009C2B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				469272C023F74A60009C2B6D /* DuoUI */,
+				4692732723F76B9A009C2B6D /* DuoUITests */,
+				4692733523F76BAF009C2B6D /* DuoUIUITests */,
 				469272BF23F74A60009C2B6D /* Products */,
 				74332E4C094767988A815D52 /* Pods */,
 				D9D17F9BAC0E76D45D8D2678 /* Frameworks */,
@@ -92,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				469272BE23F74A60009C2B6D /* DuoUI.app */,
+				4692732623F76B9A009C2B6D /* DuoUITests.xctest */,
+				4692733423F76BAF009C2B6D /* DuoUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +150,8 @@
 				469272C123F74A60009C2B6D /* AppDelegate.swift */,
 				469272C323F74A60009C2B6D /* SceneDelegate.swift */,
 				469272C523F74A60009C2B6D /* ViewController.swift */,
+				4692732023F75102009C2B6D /* AchievementCell.swift */,
+				4692731E23F750BC009C2B6D /* ShopItemCell.swift */,
 				469272D523F74A9F009C2B6D /* DuolingoButton.swift */,
 				469272D723F74AC2009C2B6D /* DuolingoTitleLabel.swift */,
 				469272D923F74AE2009C2B6D /* DuolingoLabel.swift */,
@@ -134,6 +183,24 @@
 				4692730E23F74C8A009C2B6D /* penguin.svg */,
 			);
 			path = SVG;
+			sourceTree = "<group>";
+		};
+		4692732723F76B9A009C2B6D /* DuoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4692732823F76B9A009C2B6D /* DuoUITests.swift */,
+				4692732A23F76B9A009C2B6D /* Info.plist */,
+			);
+			path = DuoUITests;
+			sourceTree = "<group>";
+		};
+		4692733523F76BAF009C2B6D /* DuoUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4692733623F76BAF009C2B6D /* DuoUIUITests.swift */,
+				4692733823F76BAF009C2B6D /* Info.plist */,
+			);
+			path = DuoUIUITests;
 			sourceTree = "<group>";
 		};
 		74332E4C094767988A815D52 /* Pods */ = {
@@ -175,6 +242,42 @@
 			productReference = 469272BE23F74A60009C2B6D /* DuoUI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4692732523F76B9A009C2B6D /* DuoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4692732D23F76B9A009C2B6D /* Build configuration list for PBXNativeTarget "DuoUITests" */;
+			buildPhases = (
+				4692732223F76B9A009C2B6D /* Sources */,
+				4692732323F76B9A009C2B6D /* Frameworks */,
+				4692732423F76B9A009C2B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4692732C23F76B9A009C2B6D /* PBXTargetDependency */,
+			);
+			name = DuoUITests;
+			productName = DuoUITests;
+			productReference = 4692732623F76B9A009C2B6D /* DuoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4692733323F76BAF009C2B6D /* DuoUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4692733B23F76BAF009C2B6D /* Build configuration list for PBXNativeTarget "DuoUIUITests" */;
+			buildPhases = (
+				4692733023F76BAF009C2B6D /* Sources */,
+				4692733123F76BAF009C2B6D /* Frameworks */,
+				4692733223F76BAF009C2B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4692733A23F76BAF009C2B6D /* PBXTargetDependency */,
+			);
+			name = DuoUIUITests;
+			productName = DuoUIUITests;
+			productReference = 4692733423F76BAF009C2B6D /* DuoUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,6 +290,14 @@
 				TargetAttributes = {
 					469272BD23F74A60009C2B6D = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					4692732523F76B9A009C2B6D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 469272BD23F74A60009C2B6D;
+					};
+					4692733323F76BAF009C2B6D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 469272BD23F74A60009C2B6D;
 					};
 				};
 			};
@@ -204,6 +315,8 @@
 			projectRoot = "";
 			targets = (
 				469272BD23F74A60009C2B6D /* DuoUI */,
+				4692732523F76B9A009C2B6D /* DuoUITests */,
+				4692733323F76BAF009C2B6D /* DuoUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +339,20 @@
 				4692731D23F74D40009C2B6D /* AssetsAttribution.txt in Resources */,
 				4692731223F74C8A009C2B6D /* flamingos.svg in Resources */,
 				4692731623F74C8A009C2B6D /* penguin.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4692732423F76B9A009C2B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4692733223F76BAF009C2B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +407,7 @@
 			files = (
 				469272E023F74B40009C2B6D /* DuolingoBorderedCard.swift in Sources */,
 				469272D623F74A9F009C2B6D /* DuolingoButton.swift in Sources */,
+				4692731F23F750BC009C2B6D /* ShopItemCell.swift in Sources */,
 				469272C623F74A60009C2B6D /* ViewController.swift in Sources */,
 				469272C223F74A60009C2B6D /* AppDelegate.swift in Sources */,
 				469272D823F74AC2009C2B6D /* DuolingoTitleLabel.swift in Sources */,
@@ -288,11 +416,41 @@
 				469272DA23F74AE2009C2B6D /* DuolingoLabel.swift in Sources */,
 				469272DC23F74B10009C2B6D /* DuolingoSeparator.swift in Sources */,
 				469272DE23F74B2C009C2B6D /* DuolingoShadowedCard.swift in Sources */,
+				4692732123F75102009C2B6D /* AchievementCell.swift in Sources */,
 				469272E423F74B76009C2B6D /* DuolingoExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4692732223F76B9A009C2B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4692732923F76B9A009C2B6D /* DuoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4692733023F76BAF009C2B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4692733723F76BAF009C2B6D /* DuoUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4692732C23F76B9A009C2B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469272BD23F74A60009C2B6D /* DuoUI */;
+			targetProxy = 4692732B23F76B9A009C2B6D /* PBXContainerItemProxy */;
+		};
+		4692733A23F76BAF009C2B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469272BD23F74A60009C2B6D /* DuoUI */;
+			targetProxy = 4692733923F76BAF009C2B6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		469272C723F74A60009C2B6D /* Main.storyboard */ = {
@@ -466,6 +624,84 @@
 			};
 			name = Release;
 		};
+		4692732E23F76B9A009C2B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9A8H575U4L;
+				INFOPLIST_FILE = DuoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jarviswu.DuoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuoUI.app/DuoUI";
+			};
+			name = Debug;
+		};
+		4692732F23F76B9A009C2B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9A8H575U4L;
+				INFOPLIST_FILE = DuoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jarviswu.DuoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuoUI.app/DuoUI";
+			};
+			name = Release;
+		};
+		4692733C23F76BAF009C2B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9A8H575U4L;
+				INFOPLIST_FILE = DuoUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jarviswu.DuoUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DuoUI;
+			};
+			name = Debug;
+		};
+		4692733D23F76BAF009C2B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9A8H575U4L;
+				INFOPLIST_FILE = DuoUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jarviswu.DuoUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DuoUI;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,6 +719,24 @@
 			buildConfigurations = (
 				469272D323F74A61009C2B6D /* Debug */,
 				469272D423F74A61009C2B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4692732D23F76B9A009C2B6D /* Build configuration list for PBXNativeTarget "DuoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4692732E23F76B9A009C2B6D /* Debug */,
+				4692732F23F76B9A009C2B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4692733B23F76BAF009C2B6D /* Build configuration list for PBXNativeTarget "DuoUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4692733C23F76BAF009C2B6D /* Debug */,
+				4692733D23F76BAF009C2B6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
